@@ -12,7 +12,7 @@ export const USER_NAME = "MareSera";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://content.maresera.top";
+export const SERVER_URL = "https://content.maresera.top/";
 
 // Menu items for navigation
 export const menuItems = [
