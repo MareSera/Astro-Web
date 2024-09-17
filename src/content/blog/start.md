@@ -7,7 +7,7 @@ tags:
   - 杂谈
 badge: 新的开始！
 categories:
-  - 生活
+  - life
 ---
 
 2024年6月17日，我删掉了原来美化了半年的旧博客（Hexo），换成了更高性能的Astro。

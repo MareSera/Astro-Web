@@ -7,7 +7,7 @@ tags:
   - 人工智能
 badge: 想要将各种AI接入你的微信？
 categories:
-  - 技术
+  - tech
 ---
 > 建议视频文字教程搭配使用
 

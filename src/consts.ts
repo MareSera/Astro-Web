@@ -12,7 +12,7 @@ export const USER_NAME = "MareSera";
 export const USER_AVATAR = "/profile.webp";
 
 // Server and transition settings
-export const SERVER_URL = "https://content.maresera.top/";
+export const SERVER_URL = "https://content.maresera.top";
 
 // Menu items for navigation
 export const menuItems = [
@@ -24,6 +24,29 @@ export const menuItems = [
     href: "/blog",
     svg: "blog",
     target: "_self",
+    subItems: [
+      {
+        id: "all",
+        text: "全部文章",
+        href: "/blog",
+        svg: "post",
+        target: "_self",
+      }, // All blog
+      {
+        id: "tech",
+        text: "技术文档",
+        href: "/blog/categories/tech",
+        svg: "cube",
+        target: "_self",
+      }, // Technology category
+      {
+        id: "life",
+        text: "生活随笔",
+        href: "/blog/categories/life",
+        svg: "heart",
+        target: "_self",
+      }, // Life category
+    ],
   }, // Blog page with sub-items
   {
     id: "project",

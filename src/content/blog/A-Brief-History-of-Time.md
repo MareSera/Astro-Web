@@ -7,7 +7,7 @@ tags:
   - 物理
 badge: 《时间简史》解读
 categories:
-  - 技术
+  - tech
 
 ---
 

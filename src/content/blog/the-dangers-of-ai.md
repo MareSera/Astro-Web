@@ -7,7 +7,7 @@ tags:
   - 人工智能
 badge: 人工智能
 categories:
-  - 技术
+  - tech
 ---
 
 
