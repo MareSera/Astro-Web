@@ -1,0 +1,34 @@
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseCard from "../components/BaseCard.astro";
+import Collapse from "../components/blog/collapse.astro";
+import Diff from "../components/blog/diff.astro";
+import Error from "../components/blog/error.astro";
+import Info from "../components/blog/info.astro";
+import Kbd from "../components/blog/kbd.astro";
+import Success from "../components/blog/success.astro";
+import Warning from "../components/blog/warning.astro";
+import TimeLine from "../components/page/TimeLine.astro";
+import LinkCard from "../components/page/LinkCard.astro";
+
+<BaseLayout title="About">
+  <BaseCard title="About">
+
+# About Me
+
+---
+
+
+## TimeLine
+
+    <TimeLine
+
+items={[
+{ year: "2016-9-1", event: "小学！ 寒亭区实验小学  " },
+{ year: "2021-9-1", event: "中学！潍坊市寒亭区实验中学" },
+{ year: "2024-6-15", event: "中考！好耶！" },
+{ year: "WAITTING", event: "人生还在进行…让我们共同努力" },
+]}
+/>
+
+  </BaseCard>
+</BaseLayout>

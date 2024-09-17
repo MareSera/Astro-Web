@@ -1,0 +1,107 @@
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseCard from "../components/BaseCard.astro";
+import Collapse from "../components/blog/collapse.astro";
+import Diff from "../components/blog/diff.astro";
+import Error from "../components/blog/error.astro";
+import Info from "../components/blog/info.astro";
+import Kbd from "../components/blog/kbd.astro";
+import Success from "../components/blog/success.astro";
+import Warning from "../components/blog/warning.astro";
+import TimeLine from "../components/page/TimeLine.astro";
+import LinkCard from "../components/page/LinkCard.astro";
+
+<BaseLayout title="Home">
+  <BaseCard title="Home">
+    <div class="flex">
+      <div class="p-6">
+          # Hi there! 👋
+
+
+          我是 MareSera！
+
+          ## 我写我，不论主谓宾，可以反复错！
+
+
+          一个普通的 **高一** 学生。
+      </div>
+    </div>
+
+  </BaseCard>
+
+  <BaseCard title="Home" image="/index.webp">
+  
+# Home
+
+---
+
+一个就读于寒亭区第一中学的高一学生！
+
+
+这里不知道还可以写些什么欸！
+
+那就不定期放一点我喜欢的东西吧：
+
+> 当泪的潮涌渐渐退远，理想的岛屿就会浮现。——顾城
+
+
+    ---
+
+    ## 推荐！
+
+    <div class="grid grid-cols-1 gap-4">
+    <LinkCard
+        title="本站公告！"
+        desc="入站须知！一定要来看看~"
+        badge=""
+        url="https://blog.maresera.top/blog/置顶本站公告"
+      />
+      <LinkCard
+        title="友链申请专区"
+        desc="请不要在除这里外的任何地方发布友链添加信息，看到就删"
+        badge=""
+        url="https://blog.maresera.top/blog/友链申请"
+      />
+      <LinkCard
+        title="我们温馨的小群"
+        desc="QQ群！点击跳转添加链接"
+        badge=""
+        url="https://qm.qq.com/q/RKJaqKDkCk"
+      />
+
+   </div>
+
+
+## Content
+
+    <div class="grid grid-cols-2 gap-4">
+      <LinkCard
+        title="博客"
+        desc="想到的与看到的"
+        url="/blog"
+        target = "_self"
+      />
+      <LinkCard
+        title="项目"
+        desc="想法的实现"
+        url="/project"
+        target = "_self"
+      />
+      <LinkCard
+        title="关于"
+        desc="“我”与博客"
+        url="/about"
+        target = "_self"
+      />
+      <LinkCard
+        title="友链"
+        desc="有趣的灵魂"
+        url="/friend"
+        target = "_self"
+      />
+    </div>
+
+
+  </BaseCard>
+</BaseLayout>
+
+

@@ -1,0 +1,151 @@
+---
+title: '服务器指令大全'
+description: '服务器指令大全'
+pubDate: 'Jun 06 999'
+image: '/home.webp'
+tags:
+  - 公告
+badge: 指令大全
+---
+
+import Collapse from "../../components/blog/collapse.astro";
+import Diff from "../../components/blog/diff.astro";
+import Error from "../../components/blog/error.astro";
+import Info from "../../components/blog/info.astro";
+import Kbd from "../../components/blog/kbd.astro";
+import Success from "../../components/blog/success.astro";
+import Warning from "../../components/blog/warning.astro";
+import TimeLine from "../../components/page/TimeLine.astro";
+import LinkCard from "../../components/page/LinkCard.astro";
+
+##  服务器菜单
+
+### 召唤侧边栏菜单
+
+将视角拉到最高，点按shift一次以召唤菜单，点击【轮播】等选项可以开启侧边栏
+
+
+## 权限范围
+
+| 权限 | 范围 |
+|-|-|
+| 0 | 所有人 |
+| 1 | 普通用户(默认) |
+| 2 | helper（助手？） |
+| 3 | 管理员 |
+| 4 | 所有者（owner） |
+
+
+## '!!'指令
+
+<Warning>下面的所有指令需要`!`的都是英文，中文不可用</Warning>
+
+### 帽子？
+
+|指令内容|权限|作用|
+|-|-|-|
+|!!hat|1|把手上的物品/方块替换到头上|
+
+
+### 数据库相关
+
+|指令内容|权限|作用|
+|-|-|-|
+|!!ledger|unknown|获取 ledger 插件帮助|
+|!!ledger help|unknown|获取 ledger 插件帮助|
+!!ledger size|	unknown|	获取数据库大小|
+|	!!ledger connect	|	unknown	|	连接到数据库	|
+|	!!ledger close	|	unknown	|	断开数据库连接	|
+|	!!ledger clean [date]	|	unknown	|	准备清理数据库，未指定 [date] 会自动清理配置文件 reserved_days 天前的数据	|
+|	!!ledger clean confirm	|	unknown	|	确认开始清理	|
+|	!!ledger free	|	unknown	|	释放空数据的硬盘空间	|
+
+### 白名单相关
+
+|指令内容|权限|作用|
+|-|-|-|
+|	!!wr help	|	0	|	显示 OfflineWhitelistReforged 帮助	|
+|	!!wr list	|	2	|	显示全部玩家白名单	|
+|	!!wr add [player]	|	3	|	为 [player] 添加白名单	|
+|	!!wr remove [player]	|	3	|	移除 [player] 白名单	|
+|	!!wr on	|	4	|	开启白名单	|
+|	!!wr off	|	4	|	关闭白名单	|.
+
+### 服务器备份
+
+|指令内容|权限|作用|
+|-|-|-|
+|	!!qb	|	unknown	|	显示帮助	|
+|	!!qb make [comment]	|	2	|	创建一个储存至槽位 1 的备份，并将后移已有槽位，[comment] 为可选存档注释	|
+|	!!qb back [slot]	|	2	|	回档为槽位 [slot] 的存档	|
+|	!!qb del [slot]	|	2	|	删除槽位 [slot] 的存档。默认为槽位 1	|
+|	!!qb rename [slot] [comment]	|	2	|	修改槽位 [slot] 的注释，即重命名这一槽位	|
+|	!!qb confirm	|	2	|	在执行 back 后使用，再次确认是否进行回档	|
+|	!!qb abort	|	2	|	在任何时候键入此指令可中断回档	|
+|	!!qb list	|	0	|	显示各槽位的存档信息	|
+|	!!qb reload	|	2	|	重新加载配置文件	|
+
+### tpa
+
+|指令内容|权限|作用|
+|-|-|-|
+|	!!tp	|	unknown	|	显示帮助	|
+|	!!tp pos [x] [y] [z]	|	1	|	传送至 [x] [y] [z]	|
+|	!!tp ask [player]	|	1	|	发送传送请求，别名 !!tpa	|
+|	!!tp askhere	|	1	|	发送传送到此处请求，别名 !!tph	|
+|	!!tp accept	|	0	|	接受传送请求	|
+|	!!tp reject	|	0	|	拒绝传送请求	|
+|	!!tp cancel	|	0	|	取消你的传送请求	|
+
+### 计算器
+
+|指令   | 用途 |   示例   | 结果
+|-|-|-|-|
+|!!calc [expression] |   计算表达式   | !!calc 1+1 |   1+1=2|
+|!!calc item [count/expression]  |  物品数转换堆叠数  |  !!calc item 1794    |1794个物品为1盒2组3个
+|!!calc item [box] [stack] [single]  |  堆叠数转换物品数  |  !!calc item 1 10 32    |1盒10组32个为2400个物品
+|!!calc color [red] [green] [blue]  |  10进制RGB转16进制    |!!calc color 255 0 255   | (255, 0, 255) -> #FF00FF
+|!!calc color [#HEX]  |  16十进制RGB转10进制   | !!calc color #00FF00  |  #00FF00 -> (0, 255, 0)
+
+### 摸鱼/爆肝时长
+
+|指令内容|权限|作用|
+|-|-|-|
+|!!seen|0|显示帮助信息|
+|!!seen [player]|0|显示玩家摸鱼/爆肝时长|
+|!!seen-top|0|查看摸鱼榜|
+|!!liver-top|0|查看爆肝榜|
+
+
+### 其他
+
+|指令内容|权限|作用|
+|-|-|-|
+|!!seed|0|查询种子|
+|!!kill|0|无管理员自杀|
+
+## '/'指令
+
+### 模式切换
+
+|指令内容|权限|作用|
+|-|-|-|
+| /c | 0 | 将模式设置为旁观者模式 |
+| /s | 0 | 将模式设置为生存模式 |
+
+### 随身工具
+
+|指令内容|权限|作用|
+|-|-|-|
+| /workbench | 0 | 打开工作台(类似于随身工作台) |
+| /enderchest | 0 | 打开自己的末影箱（不能打开别人的） |
+
+### 设置家
+
+|指令内容|权限|作用|
+|-|-|-|
+| /home delete | 0 | 删除你的家 |
+| /home list | 0 | 列出你的家 |
+| /home set [name] | 0 | 设置你的家，[name] 为家的名称 |
+| /home tp [name] | 0 | 传送到你的家，[name] 为家的名称，如果只有一个可以不填[name]，多个则必须填[name] |
+

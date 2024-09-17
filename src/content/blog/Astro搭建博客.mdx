@@ -1,0 +1,158 @@
+---
+title: '如何使用Astro搭建博客？'
+description: '博客搭建'
+pubDate: 'Aug 23 2024'
+image: '/home.webp'
+tags:
+  - 博客
+  - 网站
+badge: 如何使用Astro搭建博客？
+categories:
+  - 技术
+
+---
+
+
+import Collapse from "../../components/blog/collapse.astro";
+import Diff from "../../components/blog/diff.astro";
+import Error from "../../components/blog/error.astro";
+import Info from "../../components/blog/info.astro";
+import Kbd from "../../components/blog/kbd.astro";
+import Success from "../../components/blog/success.astro";
+import Warning from "../../components/blog/warning.astro";
+import TimeLine from "../../components/page/TimeLine.astro";
+import LinkCard from "../../components/page/LinkCard.astro";
+
+## Astro简介
+
+知道你们不愿意看这些，丢个[传送门](https://docs.astro.build/zh-cn/concepts/why-astro/)自己看去吧
+
+## 正式开始
+
+### 环境
+
+为了让 Astro 在你的电脑上运行，你需要安装 [Node.js](https://nodejs.cn/)、版本  `v18.14.1`  或更高版本。
+
+[可选的是]pnpm
+
+```bash
+npm install -g pnpm
+```
+
+### 其他东西
+
+· 一双手
+
+· 一个能看懂教程的大脑
+
+· 一个GitHub账号
+
+· 代码编辑器（VScode？）
+
+· 可能需要魔法（科学上网）
+
+### 注意
+
+<Warning>Astro和其他的博客项目不一样！可以安装多个主题，然后只用写几个配置文件就好了——还能随便切换主题。Astro 每个主题就是一个项目，而每位作者用的 frontmatter 格式可能都不一样，所以为了避免频繁迁移项目，请先选好自己要使用的主题。——这段话来自[EveSunMaple](https://www.saroprock.com/)</Warning>
+
+### 选择主题
+
+Astro有许多写好的美观好用的主题可用，你可以前往[Themes | Astro](https://astro.build/themes/)找一个适合你的使用
+
+这里我用[Journal](https://astro.build/themes/details/journal)为例
+
+![](/makeblog/1.png)
+
+### 复制模板！
+
+使用包管理器即可
+
+```bash
+npm create astro@latest -- --template New-Templates/journal
+```
+
+将上面的`New-Templates/journal`换成你选择的主题所在的GitHub仓库即可
+
+如果实在不行，你也可以选择clone（需要git）（不推荐）
+
+<Error>如果你的npm指令会报错，那就试着找度娘解决问题吧，也可以加下面的群，会有大佬帮你解决的：[点这里](https://qm.qq.com/q/RKJaqKDkCk)</Error>
+
+接下来补全必要的文件
+```bash
+npm install
+```
+接下来就能运行网站看一下了
+```bash
+npm run dev
+```
+这时，使用链接：[http://localhost:4321/](http://localhost:4321/)即可访问
+
+
+### 自定义！
+
+#### config.ts
+
+里面包含了网站的一些基本信息，下面是 journal 的 config.ts：
+
+```js
+export const SITE_FAVICON = "/favicon.png";
+export const SITE_LOGO = "/journal-logo.svg";
+export const SITE_TITLE = "Journal";
+export const SITE_DESCRIPTION =
+  "Blog";
+
+export const MENUS = [
+  {
+    title: "Posts",
+    link: "/posts",
+    target: "_self",
+  },
+  {
+    title: "Tags",
+    link: "/tags",
+    target: "_self",
+  },
+  {
+    title: "Download",
+    link: "https://new-ui.com/templates/journal",
+    target: "_blank",
+  }
+];
+
+export const FOOTER_CONTENT = "Love Everyone";
+
+```
+
+### 部署你的博客项目
+
+随便找一个托管平台部署即可，这里使用 Vercel 
+
+部署到GitHub就不用多说了吧
+
+#### Vercel
+
+1. 进入 Vercel 然后注册一个账号；
+
+2. 新建一个项目
+
+![](/makeblog/2.png)
+
+3. 选择你刚才创建上传的项目，点击项目后方的`import`
+
+![](/makeblog/3.png)
+
+4. 确认名称后点击`deploy`
+
+![](/makeblog/4.png)
+
+5. 等待部署完成后点击`Continue to Dashboard`
+
+![](/makeblog/5.png)
+
+6. 直接点击Domains可以查看分配的域名，但是由于vercel被墙可能导致访问失败，所以需要手动设置域名
+
+### 访问！
+
+以上部署完成后就可以使用刚才的域名访问网站辣！
+
+本文章示例网站：[https://tempblog.maresera.top/](https://tempblog.maresera.top/)

@@ -1,0 +1,97 @@
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseCard from "../components/BaseCard.astro";
+import Collapse from "../components/blog/collapse.astro";
+import Diff from "../components/blog/diff.astro";
+import Error from "../components/blog/error.astro";
+import Info from "../components/blog/info.astro";
+import Kbd from "../components/blog/kbd.astro";
+import Success from "../components/blog/success.astro";
+import Warning from "../components/blog/warning.astro";
+import TimeLine from "../components/page/TimeLine.astro";
+import LinkCard from "../components/page/LinkCard.astro";
+
+<BaseLayout title="Friend">
+  <BaseCard title="Friend">
+  
+# Friend
+
+这是一群有趣的人~
+
+## 申请要求：
+
+**非博客类型网站请勿申请，概不通过，谢谢！**
+
+1. 仅支持HTTPS站点且稳定运行3个月以上。
+2. 仅支持博客类型站点且有一定量的原创文章。
+3. 不支持含有资源分享、导航、广告、盈利、搬运等非个人博客网站内容。
+4. 您的网站必须符合中国大陆法律法规。
+5. 贵站已添加本站友链信息。
+
+## 本站信息：
+
+网站名称：MareSera's Blog
+
+网站链接：https://blog.maresera.top
+
+网站描述：一个普通学生的小小站点
+
+网站图标：https://blog.maresera.top/profile.webp
+
+> 申请格式请参考以上信息
+
+> 申请请发在[友链申请专区](https://blog.maresera.top/blog/友链申请)评论区哦，如果我长时间没有通过请给我发邮件！[点此发送邮件](mailtp:lyt15624134413@gmail.com)也可以[点此加QQ群](https://qm.qq.com/q/A9g3Uj2f9Q)
+
+---
+
+    <div class="grid grid-cols-2 gap-4">
+      <LinkCard
+        title="MareSera's Blog"
+        desc="实事求是 坚韧不拔 有志竟成 朝夕不倦"
+        url="https://www.maresera.top/"
+        img="https://blog.maresera.top/profile.webp"
+      />
+      <LinkCard
+        title="EveSunMaple"
+        desc="Author of Frosti Theme Template"
+        url="https://www.saroprock.com"
+        img="https://www.saroprock.com/profile.webp"
+      />
+      <LinkCard
+        title="Echo 的小窝"
+        img="https://yy.liveout.cn/photo/photo2.jpg"
+        desc="漂泊于互联网中的小窝"
+        badge=""
+        url="https://www.liveout.cn/"
+      />
+      <LinkCard
+        title="Dash 博客"
+        img="https://s1.ax1x.com/2023/07/06/pC6Z3hd.jpg"
+        desc="⌈搏海之明辉，何来彼岸？⌋"
+        badge=""
+        url="https://dashbing.github.io/"
+      />
+      <LinkCard
+        title="安知鱼"
+        img="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"
+        desc="生活明朗，万物可爱"
+        badge=""
+        url="https://blog.anheyu.com/"
+      />
+      <LinkCard
+        title="Oldming的杂货铺"
+        img="https://img.oldming.top/halo2/mason_50_A_minimalist_style_avatar_featuring_a_boy_designed_in__0122e22d-a6e7-4004-a07d-38539c932299.png"
+        desc="记录生活碎碎念"
+        badge=""
+        url="https://www.oldming.cn/"
+      />
+      <LinkCard
+        title="無名小栈"
+        img="https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png"
+        desc="分享技术与科技生活"
+        badge=""
+        url="https://blog.imsyy.top/"
+      />
+    </div>
+  </BaseCard>
+</BaseLayout>
+
